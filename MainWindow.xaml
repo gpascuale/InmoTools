@@ -1,0 +1,89 @@
+﻿<Window x:Class="InmoTools.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InmoTools"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen" WindowState="Maximized"
+        Title="InmoTools: Gestion inteligente de tu inmobiliaria" Icon="C:\DocumentosGerman\FCT\InmoTools\Imagenes\logoInmo2maxi.png" Height="800" Width="1000" WindowStyle="SingleBorderWindow" FontWeight="Bold" FontSize="14">
+    <Border CornerRadius="10" Background="AliceBlue" >
+        <Grid x:Name="MenuGrid">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0.047"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="232"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Start: GridColumn Left -->
+            <!-- End: GridColumn Left -->
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <!-- Start: Button Close | Restore | Minimize -->
+                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Margin="540,0,0,0" Height="30" Orientation="Horizontal" FlowDirection="RightToLeft" Grid.RowSpan="2" Width="0"/>
+                <!-- End: Button Close | Restore | Minimize -->
+
+                <!-- Start: Frame Container -->
+                <Border CornerRadius="0 0 5 0" Grid.Row="1" Background="White">
+                    <Frame x:Name="frameContent" NavigationUIVisibility="Hidden" Margin="10,41,10,10" Background="#FFF0F0F3"/>
+                </Border>
+                <!-- End: Frame Container -->
+
+            </Grid>
+            <Button x:Name="BtnDashboard" HorizontalAlignment="Center" Margin="0,201,0,0" VerticalAlignment="Top" Height="65" Width="250"
+                    Background="White" BorderBrush="Transparent" Click="BtnDashboard_Click" GotFocus="BtnDashboard_GotFocus" LostFocus="BtnDashboard_LostFocus" >
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="C:\DocumentosGerman\FCT\InmoTools\Imagenes\layout.png" Stretch="Uniform" Width="20" RenderTransformOrigin="0.283,0.492" Height="20"/>
+                    <TextBlock Text="    Dashboard  " FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="Black" FontWeight="Bold"/>
+                </StackPanel>
+            </Button>
+
+
+            <Image HorizontalAlignment="Left" Height="134" Margin="45,24,0,0" VerticalAlignment="Top" Width="166" Source="C:\DocumentosGerman\FCT\InmoTools\Imagenes\logoInmo2.png"/>
+            <Button x:Name="BtnProperties" HorizontalAlignment="Center" Margin="0,281,0,0" VerticalAlignment="Top" Height="65" Width="250"
+                Background="white" BorderBrush="Transparent" Click="BtnProperties_Click" GotFocus="BtnProperties_GotFocus" LostFocus="BtnProperties_LostFocus">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="C:\DocumentosGerman\FCT\InmoTools\Imagenes\hogar (2).png" Stretch="Uniform" Width="20" RenderTransformOrigin="0.283,0.492" Height="20"/>
+                    <TextBlock Text="    Propiedades" FontSize="16" Foreground="Black" FontWeight="Bold"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="BtnClientes" HorizontalAlignment="Center" VerticalAlignment="Top" Height="65" Width="250"
+                Background="white" BorderBrush="Transparent" Click="BtnClientes_Click" GotFocus="BtnClientes_GotFocus" LostFocus="BtnClientes_LostFocus" Margin="0,353,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="C:\DocumentosGerman\FCT\InmoTools\Imagenes\bienes-raices.png" Stretch="Uniform" Width="20" RenderTransformOrigin="0.283,0.492" Height="20"/>
+                    <TextBlock Text="    Clientes        " FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="Black" FontWeight="Bold"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="BtnValoracion" HorizontalAlignment="Center" VerticalAlignment="Top" Height="65" Width="250"
+                Background="white" BorderBrush="Transparent" Click="BtnValoracion_Click" GotFocus="BtnValoracion_GotFocus" LostFocus="BtnValoracion_LostFocus" Margin="0,433,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="C:\DocumentosGerman\FCT\InmoTools\Imagenes\bienes-raices (2).png" Stretch="Uniform" Width="20" RenderTransformOrigin="0.283,0.492" Height="20"/>
+                    <TextBlock Text="    Valoracion   " FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="Black" FontWeight="Bold"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="BtnHipoteca" HorizontalAlignment="Center" Margin="0,503,0,0" VerticalAlignment="Top" Height="65" Width="250"
+                Background="white" BorderBrush="Transparent" Click="BtnHipoteca_Click" GotFocus="BtnHipoteca_GotFocus" LostFocus="BtnHipoteca_LostFocus">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="C:\DocumentosGerman\FCT\InmoTools\Imagenes\contrato (1).png" Stretch="Uniform" Width="20" RenderTransformOrigin="0.283,0.492" Height="20"/>
+                    <TextBlock Text="    Hipoteca     " FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="Black" FontWeight="Bold"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="BtnCerrarSesion" HorizontalAlignment="Center" Margin="0,730,0,0" VerticalAlignment="Top" Height="65" Width="250"
+                Background="Transparent" BorderBrush="Transparent" Click="BtnCerrarSesion_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="C:\DocumentosGerman\FCT\InmoTools\Imagenes\button_turn_off_15005.png" Stretch="Uniform" Width="20" RenderTransformOrigin="0.283,0.492" Height="20"/>
+                    <TextBlock Text="    Cerrar Sesion" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="Black" FontWeight="Bold"/>
+                </StackPanel>
+            </Button>
+        </Grid>
+    </Border>
+</Window>

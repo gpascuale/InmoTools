@@ -1,0 +1,88 @@
+﻿<Page x:Class="InmoTools.Paginas.CrudPropiedades"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InmoTools.Paginas"
+      mc:Ignorable="d" 
+     d:DesignHeight="800" d:DesignWidth="1000"
+      Title="CrudPropiedades">
+    <Border Background="Pink" CornerRadius="10">
+        <Grid Background="#FFD9E2B7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="65"/>
+                <ColumnDefinition Width="190*"/>
+                <ColumnDefinition Width="363*"/>
+                <ColumnDefinition Width="93"/>
+                <ColumnDefinition Width="180*"/>
+                <ColumnDefinition Width="89*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="Titulo" Text="NUEVA PROPIEDAD" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="30" Height="40" Width="300" Margin="63,0,0,0" FontWeight="Bold"/>
+            <Button x:Name="BtnVolver" Content="Volver" Grid.Column="1" Grid.Row="2" Cursor="Hand" Background="Gray" Margin="68,0,67,0" Click="BtnVolver_Click" Foreground="#FFF3F0F0" FontWeight="Bold"/>
+            <TextBlock Grid.Row="4" Grid.Column="1" Text="Direccion " HorizontalAlignment="Left" VerticalAlignment="Center" Height="16" Width="92" FontSize="14" FontWeight="Bold"/>
+            <TextBox Grid.Row="3" Grid.Column="2" x:Name="CampoDireccion" Margin="0,44,0,0" Grid.RowSpan="2"/>
+            <TextBlock Grid.Row="6" Grid.Column="1" Text="Zona" HorizontalAlignment="Left" VerticalAlignment="Center" Height="16" Width="82" FontSize="14" FontWeight="Bold"/>
+
+            <TextBlock Grid.Row="8" Grid.Column="1" Text="M2" HorizontalAlignment="Left" VerticalAlignment="Center" Height="16" Width="46" FontSize="14" FontWeight="Bold"/>
+            <TextBox Grid.Row="8" Grid.Column="2" x:Name="CampoM2" Margin="0,0,0,44" Grid.RowSpan="2"/>
+            <TextBlock Grid.Row="10" Grid.Column="1" Text="Tipo" HorizontalAlignment="Left" VerticalAlignment="Center" Height="16" Width="65" FontSize="14" FontWeight="Bold"/>
+            <TextBox Grid.Row="10" Grid.Column="2" x:Name="CampoTipo" Margin="0,0,0,44" Grid.RowSpan="2"/>
+            <TextBlock Grid.Row="12" Grid.Column="1" Text="Precio" HorizontalAlignment="Left" VerticalAlignment="Center" Height="18" Width="65" FontSize="14" FontWeight="Bold"/>
+            <TextBox Grid.Row="11" Grid.Column="2" x:Name="CampoPrecio" Margin="0,44,0,0" Grid.RowSpan="2"/>
+            <TextBlock Grid.Row="14" Grid.Column="1" Text="Operacion" HorizontalAlignment="Left" VerticalAlignment="Center" Height="16" Width="92" FontSize="14" FontWeight="Bold"/>
+            <ComboBox Grid.Row="13" Grid.Column="2" x:Name="cbOperacion" Margin="0,30,181,1" Grid.RowSpan="2">
+                <ComboBoxItem  Content="Venta" />
+                <ComboBoxItem  Content="Compra"/>
+
+            </ComboBox>
+            <Button x:Name="BtnGuardar"  Content="Guardar" Grid.Column="2" Grid.Row="21" Cursor="Hand" Background="Gray" Margin="113,0,85,0" Click="BtnGuardar_Click" FontSize="16" Foreground="#FFFDF6F6" TextBlock.FontWeight="Bold" FontWeight="Bold"/>
+            <Image x:Name="Foto1" Source="C:\DocumentosGerman\FCT\InmoTools\Imagenes\addPic.png" Grid.Column="3" HorizontalAlignment="Left" Height="358" Margin="60,36,0,0" Grid.RowSpan="12" Grid.Row="5" VerticalAlignment="Top" Width="276" Grid.ColumnSpan="3"/>
+            <Button Content="Insertar Fotos" Grid.Column="4"  HorizontalAlignment="Left" Margin="58,30,0,0" Grid.Row="16" VerticalAlignment="Top" Width="94" Height="22" FontSize="14" TextBlock.FontWeight="Bold" FontWeight="Bold" Grid.RowSpan="2" Click="CargarImagen"/>
+            <ComboBox Grid.Row="5" Grid.Column="2" x:Name="cbZona" Margin="0,44,0,1" Grid.RowSpan="2">
+                <ComboBoxItem  Content="Málaga centro" />
+                <ComboBoxItem  Content="Carretera Cadiz"/>
+                <ComboBoxItem  Content="Ciudad Jardin"/>
+                <ComboBoxItem Content="Puerto la Torre"/>
+                <ComboBoxItem Content="Miraflores"/>
+                <ComboBoxItem Content="Teatinos"/>
+                <ComboBoxItem  Content="Pedregalejo" />
+                <ComboBoxItem  Content="El Limonar"/>
+                <ComboBoxItem  Content="Campanillas" />
+                <ComboBoxItem  Content="Alhaurin de la torre"/>
+                <ComboBoxItem  Content="Torremolinos"/>
+                <ComboBoxItem Content="Benalmadena"/>
+                <ComboBoxItem Content="Fuengirola"/>
+                <ComboBoxItem Content="Marbella"/>
+            </ComboBox>
+
+        </Grid>
+    </Border>
+</Page>

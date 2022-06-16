@@ -1,0 +1,25 @@
+﻿<Window x:Class="InmoTools.Registro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InmoTools"
+        mc:Ignorable="d"
+                Title="Inmotools" Icon="C:\DocumentosGerman\FCT\InmoTools\Imagenes\logoInmo2maxi.png" Height="450" Width="800">
+
+    <Grid>
+        <Grid  Background="#FF584848">
+            <Label Content="USUARIO" HorizontalAlignment="Left" Margin="520,92,0,0" VerticalAlignment="Top" Width="104" Height="33" Foreground="#FF00C2CB" FontSize="18" FontFamily="Cascadia Code" FontWeight="Bold"/>
+            <Label Content="CONTRASEÑA" HorizontalAlignment="Left" Margin="513,0,0,0" VerticalAlignment="Center" Width="118" Height="30" Foreground="#FF00C2CB" FontFamily="Cascadia Code" FontSize="18" FontWeight="Bold"/>
+            <TextBox x:Name="campoUsuario" HorizontalAlignment="Left" Margin="448,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Height="23" Background="#FFB3AAAA" FontWeight="Bold" FontSize="14"/>
+            <PasswordBox x:Name="campoContrasenia" HorizontalAlignment="Left" Margin="448,258,0,0" VerticalAlignment="Top" Width="230" Height="25" Background="#FFB3AAAA"/>
+            <Button x:Name="BtnRegistro" Content="REGISTRARSE" HorizontalAlignment="Left" Margin="448,329,0,0" VerticalAlignment="Top" Width="230" Height="25" Foreground="Black" Background="#FFBB3B18" FontWeight="Bold" FontFamily="Cascadia Code" FontSize="18" Click="BtnRegistro_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Image HorizontalAlignment="Left" Height="330" Margin="10,29,0,0" VerticalAlignment="Top" Width="380" Source="C:\DocumentosGerman\FCT\InmoTools\Imagenes\logoInmo2.png"/>
+
+        </Grid>
+    </Grid>
+</Window>
