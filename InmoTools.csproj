@@ -60,9 +60,6 @@
     <Compile Include="Paginas\Cruces.xaml.cs">
       <DependentUpon>Cruces.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Paginas\Fotos.xaml.cs">
-      <DependentUpon>Fotos.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Registro.xaml.cs">
       <DependentUpon>Registro.xaml</DependentUpon>
     </Compile>
@@ -102,10 +99,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Paginas\Dashboard1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Paginas\Fotos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

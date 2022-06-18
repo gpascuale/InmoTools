@@ -41,7 +41,8 @@ namespace InmoTools.Paginas
         {
             if(CampoDni.Text ==""||CampoNombre.Text =="" ||CampoZona.Text ==""||CampoEmail.Text =="" ||CampoTelefono.Text=="" ||CampoPresupuesto.Text==""|| cbOperacion.Text == "")
             {
-                MessageBox.Show("Algun campo vacío");
+                MessageBox.Show("Algún campo vacio",
+          "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else {
                 con.Open();
@@ -57,7 +58,7 @@ namespace InmoTools.Paginas
                     cm.Parameters.AddWithValue("@operacion", cbOperacion.Text);
                     cm.ExecuteNonQuery();
                     con.Close();
-                    MessageBox.Show("Cliente creado");
+                    MessageBox.Show("Cliente creado","Exito",MessageBoxButton.OK,MessageBoxImage.Information);
                     Content = new Clientes();
 
                 }

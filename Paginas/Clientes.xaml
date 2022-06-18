@@ -42,10 +42,10 @@
             <Button Grid.Column="3" Grid.Row="2" Background="Gray" BorderBrush="Black" Margin="132,0,0,0" Cursor="Hand" Width="100" x:Name="BtnLimpiar" HorizontalAlignment="Left" Click="BtnLimpiar_Click" Grid.ColumnSpan="2">
                 <TextBlock Text="Limpiar" Foreground="White" FontSize="20"/>
             </Button>
-            <Button Grid.Column="4" Background="#FF980F0F" BorderBrush="Black" Margin="10,36,0,4" Cursor="Hand" Width="150" x:Name="BtnBorrarCliente" HorizontalAlignment="Left" Grid.RowSpan="2" Click="BtnBorrarCliente_Click" >
+            <Button Grid.Column="4" Background="#FFAC5050" BorderBrush="Black" Margin="10,36,0,4" Cursor="Hand" Width="150" x:Name="BtnBorrarCliente" HorizontalAlignment="Left" Grid.RowSpan="2" Click="BtnBorrarCliente_Click" >
                 <TextBlock Text="Borrar Cliente" Foreground="White" FontSize="20"/>
             </Button>
-            <Button Grid.Column="4" Grid.Row="2" Background="#FF509C36" BorderBrush="Black" Margin="10,0,0,0" Cursor="Hand" Width="150" x:Name="BtnCrearCliente" HorizontalAlignment="Left" Click="BtnCrearCliente_Click" >
+            <Button Grid.Column="4" Grid.Row="2" Background="#FF659B52" BorderBrush="Black" Margin="10,0,0,0" Cursor="Hand" Width="150" x:Name="BtnCrearCliente" HorizontalAlignment="Left" Click="BtnCrearCliente_Click" >
                 <TextBlock Text="Crear Cliente" Foreground="White" FontSize="20"/>
             </Button>
             <DataGrid Grid.Row="4" Grid.Column="1" Grid.RowSpan="3" Grid.ColumnSpan="4" x:Name="GridDatos" AutoGenerateColumns="False" Background="GhostWhite" Foreground="Gray" FontSize="20" CanUserAddRows="False" CanUserReorderColumns="False"

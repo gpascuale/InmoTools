@@ -30,7 +30,9 @@ namespace InmoTools.Paginas
         {
             if (CampoPrecio.Text == "" || CampoAhorro.Text == "" || CampoAños.Text == "" || cbEstado.Text == "" )
             {
-                MessageBox.Show("Algun campo vacío");
+                MessageBox.Show("Algún campo vacio",
+        "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+
             }
             else
             {

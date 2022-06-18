@@ -12,5 +12,6 @@
         <DataGrid x:Name="GridCruces">
 
         </DataGrid>
+        <TextBox x:Name="id" HorizontalAlignment="Left" Margin="171,98,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185" Height="47"/>
     </Grid>
 </Page>

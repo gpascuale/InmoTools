@@ -50,7 +50,9 @@ namespace InmoTools.Paginas
         {
             if (cbZona.Text == "" || CampoM2.Text == "" || CampoUtiles.Text == "" || cbObra.Text == "" || cbJardin.Text == "" || cbEf.Text == "" || cbDormitorios.Text == "" || cbBaños.Text == "" || cbPiscina.Text == "" )
             {
-                MessageBox.Show("Algun campo vacío");
+                MessageBox.Show("Algún campo vacio",
+     "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+
             }
             else///M2/zona
             {

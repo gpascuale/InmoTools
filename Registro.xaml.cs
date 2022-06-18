@@ -32,8 +32,10 @@ namespace InmoTools
         {
             if (campoUsuario.Text == "" || campoContrasenia.ToString() == "")
             {
-                MessageBox.Show("Algun campo vacío");
-            }
+                MessageBox.Show("Algún campo vacio",
+             "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+           
+        }
             else
             {
                 con.Open();
@@ -43,8 +45,8 @@ namespace InmoTools
                     cm.Parameters.AddWithValue("@nombre", campoUsuario.Text);
                     cm.Parameters.AddWithValue("@contrasenia", campoContrasenia.Password.ToString());
                     cm.ExecuteNonQuery();
-                    MessageBox.Show("Usuario registrado");
-                   
+                    MessageBox.Show("Bienvenido", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
+
                     con.Close();
                     campoUsuario.Text = "";
                     //campoContrasenia.Password.ToString() = "";

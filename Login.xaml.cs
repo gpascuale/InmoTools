@@ -30,22 +30,7 @@ namespace InmoTools
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            /*conexion.Open();
-            SqlCommand comandos = new SqlCommand("Select contrasenia from  usuarios where nombre="+ campoUsuario.Text, conexion);
-            muestra.Text = comandos.ToString();
-            if (campoContrasenia.Password.ToString() == comandos.Parameters.ToString())
-            {
-                MessageBox.Show("Bienvenido"+""+campoUsuario.Text);
-                comandos.ExecuteNonQuery();
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
-                this.Close();
-            }
-            else
-            {
-               // MessageBox.Show("Campos incorrectos");
-            }
-            conexion.Close();*/
+            
 
             try
             {
@@ -56,14 +41,15 @@ namespace InmoTools
                         SqlDataReader dr = cmd.ExecuteReader();
                         if (dr.Read())
                         {
-                            MessageBox.Show("Login exitoso.");
+                            MessageBox.Show("Bienvenido", "Exito", MessageBoxButton.OK,MessageBoxImage.Information);
                             MainWindow mainWindow = new MainWindow();
                             mainWindow.Show();
                             this.Close();
                         }
                         else
                         {
-                            MessageBox.Show("Datos incorrectos.");
+                            MessageBox.Show("Datos incorrectos",
+                    "Error", MessageBoxButton.OK , MessageBoxImage.Error );
                         }
                     }
                 }
@@ -73,7 +59,7 @@ namespace InmoTools
                 MessageBox.Show(ex.ToString());
             }
 
-
+            conexion.Close();
         }
 
         private void BtnRegistro_Click(object sender, RoutedEventArgs e)

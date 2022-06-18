@@ -74,7 +74,7 @@ namespace InmoTools.Paginas
                 //volvemos a motrar la tabla de clientes
                 Content = new Clientes();
                 MessageBox.Show("Cliente borrado",
-                    "Exito", MessageBoxButton.OK
+                    "Exito", MessageBoxButton.OK, MessageBoxImage.Information
                      );
                 
 
@@ -83,7 +83,7 @@ namespace InmoTools.Paginas
             else
             {
                 MessageBox.Show("Selecciona un cliente para borrar",
-                   "Error", MessageBoxButton.OK
+                   "Error", MessageBoxButton.OK , MessageBoxImage.Error
                     );
             }
 

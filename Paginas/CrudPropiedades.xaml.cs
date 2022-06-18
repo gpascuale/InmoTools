@@ -42,8 +42,11 @@ namespace InmoTools.Paginas
         {
             if (CampoDireccion.Text == ""  || cbZona.Text == "" || CampoM2.Text == "" || CampoTipo.Text == "" || CampoPrecio.Text == "" || cbOperacion.Text == "")
             {
-                MessageBox.Show("Algun campo vacío");
-            }
+                MessageBox.Show("Algún campo vacio",
+         "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            
+
+        }
             else
             {
                 con.Open();
@@ -59,7 +62,7 @@ namespace InmoTools.Paginas
                     cm.Parameters.AddWithValue("@imagen",SqlDbType.VarBinary).Value=data;
                     cm.ExecuteNonQuery();
                     con.Close();
-                    MessageBox.Show("Propiedad creada");
+                    MessageBox.Show("Propiedad creada", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
                     Content = new Propiedades();
 
                 }
